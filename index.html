@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hand Tracking! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="button.js"></script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-entity gltf-model="url(mars.glb)" position="-73.063 -15.2 45" animation-mixer></a-entity>
+      <a-plane 
+        id="data-account" 
+        color="black" 
+        position="0 1.75 -0.5" 
+        height="0.4" 
+        width="0.4" 
+        rotation="0 0 0">
+      </a-plane>
+      <a-entity
+        id="btn-connect" 
+        button="label:Connect Wallet; width: 0.26;" 
+        position="0 1.5 -0.5"
+        rotation="-45 0 0">
+      </a-entity>
+      <a-entity
+        id="btn-disconnect" 
+        button="label:Disconnect Wallet; width: 0.30;" 
+        position="0 1.43 -0.5"
+        rotation="-45 0 0"
+        visible="false">
+      </a-entity>
+      <a-sky color="#c68e66"></a-sky>
+    </a-scene>
+  </body>
+</html>
